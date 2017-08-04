@@ -39,6 +39,8 @@ gem 'devise'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'rspec'
+  gem "rspec-rails"
 end
 
 group :development do
@@ -53,7 +55,13 @@ group :development do
 end
 
 group :test do
-  gem "rspec-rails", "~> 2.14"
+
   gem "factory_girl_rails"
+  gem "factory_girl_rspec"
   gem 'ffaker'
+
+end
+
+group :test do
+  gem 'shoulda-matchers', require: false
 end
