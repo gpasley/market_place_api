@@ -40,7 +40,7 @@ gem 'rake', '< 11.0'
 
 gem 'sabisu_rails', github: "IcaliaLabs/sabisu-rails"
 gem 'compass'
-gem 'compass-rails'
+gem 'compass-rails', '~> 2.0.2'
 gem 'furatto'
 gem 'font-awesome-rails'
 gem 'simple_form'
@@ -51,6 +51,7 @@ group :development, :test do
   gem 'byebug'
   gem 'rspec'
   gem "rspec-rails", "~> 3.1"
+
 end
 
 group :development do
@@ -65,13 +66,8 @@ group :development do
 end
 
 group :test do
-
+  gem 'shoulda-matchers', require: false
   gem "factory_girl_rails"
   gem "factory_girl_rspec"
   gem 'ffaker'
-
-end
-
-group :test do
-  gem 'shoulda-matchers', require: false
 end
